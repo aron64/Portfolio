@@ -1,0 +1,38 @@
+
+@page {
+    margin: 2cm;
+    }
+
+html {
+
+    background:white;
+    }
+body  {
+    width:100%;
+    font-family:'Times New Roman', Times, serif; 
+    background:white;
+    min-width:initial;
+    max-width:initial;
+    box-shadow:initial;
+}
+
+h1,h2,h3{
+    margin-top: 10px;
+}
+
+input,caption,video,embed,iframe,nav,header,#stickyNav{display:none;}
+a{text-decoration: none;}
+/* textarea {display: none;}  ascii art legyen nyomtathato  */
+
+a:after { content: " (" attr(href) ")";}  /* a linkek után jelenjen meg a href paraméter értéke*/
+
+#gallery, #take_care, img{
+    page-break-before: always;
+    page-break-after: always;
+}
+#take_care img{
+    page-break-before: always;
+    page-break-after: always;}
+.rejtett {position:absolute; left:-9999px;display: none;}
+#tartalomraugras a {position:absolute; left:-9999px; color:white; background-color:rgb(98, 52, 9);}
+#tartalomraugras a:focus {position:static; background-color:rgb(98, 52, 9);}

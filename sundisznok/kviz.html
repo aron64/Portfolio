@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Süni-Paradicsom – Kvíz</title>
+    <link rel="shortcut icon" href="media/logo.ico" type="image/ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
+    <link href="lightbox/dist/css/lightbox.css" rel="stylesheet">
+    <link href="css/alap.css" rel="stylesheet" media="screen">
+    <link href="css/print.css" rel="stylesheet" media="print">
+</head>
+
+<body>
+    <div class="container col-lg-6 col-md-8 col-sm-10 col-11" id="content">
+        <nav id="tartalomraugras" class="sr-only">
+            <h1 class="rejtett">Ugrás az oldalon belül</h1>
+            <a href="#content-begin">Ugrás a tartalomra</a>
+        </nav>
+        <header id="stickyNav">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-light container-fluid">
+                <a class="navbar-brand" href="index.html">Süni-Paradicsom🦔</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Kezdőlap</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tudnivalok.html">Tudnivalók</a>
+
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link active" href="kviz.html">Kvíz <span class="sr-only">(aktuális)</span></a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="extrak.html">Extrák</a>
+                        </li>
+                    </ul>
+                </div>
+                <input type="checkbox" data-toggle="toggle" data-off="Kontraszt" data-on="Normál" data-style="switch"
+                    id="switch" data-onstyle="switch" data-offstyle="switch">
+            </nav>
+        </header>
+        <main>
+            <section>
+                <h1 id="content-begin">A Nagy Süni-Kvíz</h1>
+
+                <form action="mailto:sunimuniegylet@gmail.com" method="post" name="kviz" enctype="text/plain">
+                    <fieldset>
+                        <legend>Kvíz</legend>
+                        <p>Szia!<br>Eljött az ideje, hogy megmérettess! Mindent bele!</p>
+                        <hr>
+                        <img src="media/full/jo_kis_kep.png" id="kviz_img" title="Sok sikert!"
+                            alt="A leghíresebb süni van a képen, aki szurkol neked a kvízhez, hüvelyk- és mutatóujját összeérintve, kört képezve jelzi, hogy minden oké lesz">
+                        <p>
+                            <label for="nev"><strong>Add meg a neved:</strong></label>
+                            <input type="text" size="16" name="nev" id="nev" required maxlength="16">
+                        </p>
+                        <p><strong>1. Van a süninél cukibb állat. Igaz vagy hamis?</strong><br>
+                            <input type="radio" name="k1" id="k1v1" value="igaz" disabled required>
+                            <label for="k1v1">Hogyne lenne. Rengeteg ilyen van.</label>
+                            <br>
+                            <input type="radio" name="k1" id="k1v2" value="hamis">
+                            <label for="k1v2">Ez nyilvánvalóan hamis. A süni a legcukibb állat a világon.</label>
+                        </p>
+                        <p><strong>2. Az alábbiak közül melyek jellemzőek a sünikre?</strong></p>
+                        <p>
+                            <input type="checkbox" name="jellemzo1" id="jellemzo1" value="cuki" checked="checked"
+                                disabled>
+                            <label for="jellemzo1">Cukik.</label>
+                            <br>
+                            <input type="checkbox" name="jellemzo4" id="jellemzo4" value="uncsi" disabled>
+                            <label for="jellemzo4">Uncsik.</label>
+                            <br>
+                            <input type="checkbox" name="jellemzo2" id="jellemzo2" value="szapora">
+                            <label for="jellemzo2">Szapora tappancsok.</label>
+                            <br>
+                            <input type="checkbox" name="jellemzo3" id="jellemzo3" value="imadnivalo">
+                            <label for="jellemzo3">Imádnivaló kis jószágok.</label>
+                        </p>
+                        <p>
+                            <label for="kedvence">3. <strong>Meséld el a kedvenc sünis emlékedet:</strong></label>
+                            <br>
+                            <textarea cols="50" rows="13" name="kedvence" id="kedvence" maxlength="4095" placeholder="
+                    \ / \/ \/ / ,
+                  \ /  \/ \/  \/  / ,
+                 \ \ \/ \/ \/ \ \/ \/ /
+              .\  \/  \/ \/ \/  \/ / / /
+             '  / / \/  \/ \/ \/  \/ \ \/ \
+          .'     ) \/ \/ \/ \/  \/  \/ \ / \
+         /   o    ) \/ \/ \/ \/ \/ \/ \// /
+       o'_ ',__ .'   ,.,.,.,.,.,.,.,'- '%
+                // \\          // \\       mb
+               ''  ''         ''  ''" required></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="Elküld">
+                            <input type="reset" value="Alaphelyzetbe állít">
+                        </p>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <address>
+                Ha kérdésed van, bátran vedd fel velem a kapcsolatot a következő elérhetőségen:
+                <a href="mailto:sunimuniegylet@gmail.com">Süni Müni</a>.<br><small>&copy;2021, Süni Müni</small>
+            </address>
+            <div class="row">
+                <p class="col-6">Készült a SüniMüni-egylet megbízásából.</p>
+                <p class="col-6" id="cookie">Ez a weboldal süniket használ!</p>
+            </div>
+
+        </footer>
+    </div>
+    <script src="js/css-switch.js"></script>
+</body>
+
+</html>
