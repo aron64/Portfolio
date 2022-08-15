@@ -1,4 +1,3 @@
-# OOP C++ modell solving a given task
-* Implementing basic algorithms 
-* Implementing OOP design patterns
-* CATCH2 test environment (https://github.com/catchorg/Catch2)
+# PROJECTEULER.NET
+* Here are some problems I enjoyed working on
+* the ![](./aron6464_history_2022_08_11_1428.txt) file contains the ID's of tasks I managed to solve
