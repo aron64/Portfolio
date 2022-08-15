@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Snake.View.MainPage"
+             xmlns:controls="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView">
+    <!--<StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
+        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
+        <Label FontSize="16" Padding="30,24,30,0">
+            <Label.FormattedText>
+                <FormattedString>
+                    <FormattedString.Spans>
+                        <Span Text="Learn more at "/>
+                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
+                    </FormattedString.Spans>
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
+    </StackLayout>-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <!-- stílusok a vezérlőknek -->
+            
+            <Style x:Key="FieldStyle" TargetType="Button">
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="Margin" Value="1" />
+                <Setter Property="BorderRadius" Value="0" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="WidthRequest" Value="38" />
+                <Setter Property="HeightRequest" Value="38" />
+                <Style.Triggers>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="0">
+            <Button x:Name="bUp"  Text="Fel"  Command="{Binding TurnUp}"/>
+            <Button x:Name="bDown" Text="Le"  Command="{Binding TurnDown}" />
+            <Button x:Name="bRight"  Text="Jobb"  Command="{Binding TurnRight}" />
+            <Button x:Name="bLeft" Text="Bal"  Command="{Binding TurnLeft}" />
+        </StackLayout>
+        <controls:FlowListView Grid.Row="1" FlowColumnCount="{Binding GameMapSize}" FlowItemsSource="{Binding Fields}" SeparatorVisibility="None">
+            <!-- a játéktáblát egy sorfolytos listával valósítjuk meg -->
+            <controls:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+                    <!-- a rács elemei gombok lesznek -->
+                    <Button  BackgroundColor="{Binding Color}" Text="{Binding Text}" Style="{StaticResource FieldStyle}" VerticalOptions="Center" HorizontalOptions="Center" />
+                </DataTemplate>
+            </controls:FlowListView.FlowColumnTemplate>
+        </controls:FlowListView>
+
+        <StackLayout Orientation="Horizontal" Grid.Row="2">
+                
+                <RadioButton x:Name="rbSmall"    GroupName="rbMap" Content="" IsChecked="{Binding IsGameMapSmall}"/>
+            <RadioButton x:Name="rbMedium"    GroupName="rbMap" Content="" IsChecked="{Binding IsGameMapMedium}"/>
+            <RadioButton x:Name="rbLarge"   GroupName="rbMap"  Content="" IsChecked="{Binding IsGameMapLarge}" />
+            <Button x:Name="bHelp"  Text="Segítség"  Command="{Binding HelpCommand}"/>
+            <Button x:Name="bNewGame" Text="Játék"  Command="{Binding NewGameCommand}" />
+        </StackLayout>
+
+       
+        <!-- az információkat alul írjuk ki -->
+       
+
+    </Grid>
+
+</ContentPage>
